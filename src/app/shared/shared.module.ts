@@ -13,7 +13,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ShellComponent } from './shell/shell.component';
 
 const components = [];
 
@@ -31,17 +30,12 @@ const modules = [
   MatFormFieldModule,
   MatInputModule,
   MatSnackBarModule,
-  RouterModule
+  RouterModule,
 ];
 
 @NgModule({
   declarations: [...components],
-  imports: [
-    ...modules
-  ],
-  exports: [
-    ...components,
-    ...modules
-  ]
+  imports: [...modules],
+  exports: [...components, ...modules],
 })
-export class SharedModule { }
+export class SharedModule {}
