@@ -21,7 +21,7 @@ $custom-typography: mat-typography-config(
 // hue. Available color palettes: https://material.io/design/color/
 
 /* For use in src/lib/core/theming/_palette.scss */
-$md-bced: (
+$md-bc: (
     50 : #e3e7ec,
     100 : #b8c3d1,
     200 : #899bb2,
@@ -56,7 +56,7 @@ $md-bced: (
 
 
 // $firestarter-primary: mat.define-palette(mat.$indigo-palette);
-$firestarter-primary: mat.define-palette($md-bced);
+$firestarter-primary: mat.define-palette($md-bc);
 $firestarter-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -64,7 +64,7 @@ $firestarter-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$firestarter-theme: mat.define-light-theme((
+$firestarter-theme: mat.define-dark-theme(( // define-light-theme
   color: (
     primary: $firestarter-primary,
     accent: $firestarter-accent,
