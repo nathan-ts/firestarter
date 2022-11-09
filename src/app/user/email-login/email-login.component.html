@@ -1,4 +1,22 @@
 <mat-card>
+  <div *ngif="isSignup">
+    <h3>Create Account</h3>
+    <button mat-stroked-button (click)="changeType('login')">
+      Returning user?
+    </button>
+  </div>
+  <div *ngif="isLogin">
+    <h3>Sign In</h3>
+    <button size="small" mat-stroked-button (click)="changeType('signup')">
+      New user?
+    </button>
+  </div>
+  <div *ngif="isPasswordReset">
+    <h3>Reset Password</h3>
+    <button size="small" mat-stroked-button (click)="changeType('login')">
+      Back
+    </button>
+  </div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <mat-form-field [color]="email!.valid && 'accent'">
       <input
@@ -50,4 +68,10 @@
       Submit
     </button>
   </form>
+  <button
+    *ngIf="isPasswordReset"
+    mat-stroked-button
+    type="submit"
+    [disabled]="loading"
+  ></button>
 </mat-card>
