@@ -23,6 +23,10 @@ export class EmailLoginComponent implements OnInit {
       password: ['', [Validators.minLength(6), Validators.required]],
       passwordConfirm: ['', []],
     });
+    // to make forms, always start with fb.group
+    // bind the form group to the html
+    // set up handler for submission
+    // each element should be bound via <input formControlName
   }
 
   changeType(val: any) {
